@@ -1,0 +1,7 @@
+{
+    "name": "AdonisConfigurator",
+    "tree": {
+        "$className": "Folder",
+        "$path": "src"
+    }
+}
