@@ -50,7 +50,6 @@ end
 
 -- Plugin components runner
 for _, v in ipairs(script.Parent:WaitForChild("Plugin"):GetChildren()) do
-	
 	local func = require(v)
 	local env = getfenv(func)
 	
