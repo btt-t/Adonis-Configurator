@@ -1,8 +1,8 @@
 # Adonis Configurator
 It's not entirely unexpected for someone to be unfamiliar with Luau syntax. This plugin aims to eliminate that hassle entirely, instead employing a GUI for installation and configuration.
 
-#Installation
-The average user should just click [https://www.roblox.com/library/8359267635/Adonis-Configurator](here) and install the plugin from Roblox.
+# Installation
+The average user should just click (https://www.roblox.com/library/8359267635/Adonis-Configurator)[here] and install the plugin from Roblox.
 https://www.roblox.com/library/8359267635/Adonis-Configurator
 
 You may also head to the releases page to download the version of your choice and install that (I have no idea why you would want to do that, but it's an option anyway).
