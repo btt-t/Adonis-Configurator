@@ -3,9 +3,11 @@ It's not entirely unexpected for someone to be unfamiliar with Luau syntax. This
 
 # Installation
 The average user should just click [here](https://www.roblox.com/library/8359267635/Adonis-Configurator) and install the plugin from Roblox.
+
 https://www.roblox.com/library/8359267635/Adonis-Configurator
 
 You may also head to the releases page to download the version of your choice and install that (I have no idea why you would want to do that, but it's an option anyway).
+
 https://github.com/happyman090/Adonis-Configurator/releases
 
 If you would like to use the bleeding edge version of Adonis Configurator, you should compile it yourself using Rojo.
