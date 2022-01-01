@@ -14,7 +14,7 @@ If you would like to use the bleeding edge version of Adonis Configurator, you s
 
 ## Notes
 
-This is still a WIP with missing features. I would like to add:
+This is still a WIP with quite a few critical features that are currently missing. I would like to add:
 - a way to specify a loader's location (currently just looks for Adonis_Loader in ServerScriptService)
 - a description to each property so the user knows what a property is for
 - a formatting guide somewhere inside the plugin (this may be in the form of advising the user what a value should look like when entering text input)
