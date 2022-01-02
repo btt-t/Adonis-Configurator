@@ -14,8 +14,9 @@ do
 end
 
 -- Core variables
+local Root = script.Parent
 local Plugin = setmetatable({}, {}) -- silence linter
-local Load = require(script.Parent:WaitForChild("Load"))
+local Load = require(Root:WaitForChild("Load"))
 
 local Widgets = Load("Widgets")
 local Library = Load("Library")
@@ -24,6 +25,7 @@ local Options = {}
 local AllRanks = {}
 
 local Adonis = ServerScriptService:FindFirstChild("Adonis_Loader", true)
+local PluginRanks = require(Root.Plugin.Ranks)
 local widgetGui, scrollFrame, listFrame = Run.GUI(Library, Widgets, plugin)
 
 local Updating = false
@@ -38,9 +40,9 @@ local Config do
 	end
 end
 
--- Plugin components runner
+-- Plugin components env setter/runner
 local function updatePluginEnv()
-	for _, v in ipairs(script.Parent:WaitForChild("Plugin"):GetChildren()) do
+	for _, v in ipairs(Root:WaitForChild("Plugin"):GetChildren()) do
 		local func = require(v)
 		local env = getfenv(func)
 		
@@ -76,8 +78,8 @@ SaveButton.MouseButton1Click:Connect(function()
 		end
 	end
 
-	if OriginalConfig.Ranks ~= AllRanks then
-		Run.ChangeSetting(Adonis, "Ranks", Plugin:GetValue(AllRanks))
+	if OriginalConfig.Ranks ~= getfenv(PluginRanks).AllRanks then
+		Run.ChangeSetting(Adonis, "Ranks", Plugin:GetValue(getfenv(PluginRanks).AllRanks))
 	end
 
 	SaveButton.Text = "Save"

@@ -79,7 +79,7 @@
 			<bool name="TextWrapped">false</bool>
 			<token name="TextXAlignment">2</token>
 			<token name="TextYAlignment">1</token>
-			<bool name="Visible">false</bool>
+			<bool name="Visible">true</bool>
 			<int name="ZIndex">5</int>
 		</Properties>
 		<Item class="UICorner" referent="RBX43DE7152161D4F2A98174AB84D68833C">
