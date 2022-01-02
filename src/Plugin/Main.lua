@@ -261,7 +261,7 @@ return function()
 
 		Adonis.Config.Settings:GetPropertyChangedSignal("Source"):Connect(function()
 			Config = Library.LiveRequire(Adonis.Config.Settings)
-			OriginalConfig = Plugin.Assign(Config)
+			OriginalConfig = Library.Assign(Config)
 		end)
 	end
 end
