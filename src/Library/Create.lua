@@ -1,9 +1,7 @@
-local UI = script:WaitForChild("Create")
+-- // CREATE
 
-local function Create(Enabled: boolean): Frame
-	UI.Visible = Enabled
+local Create = script.Parent.Parent.Assets.Create
 
-	return UI
+return function()
+	return Create
 end
-
-return Create

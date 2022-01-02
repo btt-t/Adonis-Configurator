@@ -14,17 +14,7 @@ do
 end
 
 -- Core variables
-local Plugin = setmetatable({
-	Assign = function(t)
-		local new = {}
-
-		for k,v in next,t do
-			new[k] = v
-		end
-
-		return new
-	end
-}, {}) -- silence linter
+local Plugin = setmetatable({}, {}) -- silence linter
 local Load = require(script.Parent:WaitForChild("Load"))
 
 local Widgets = Load("Widgets")
@@ -43,28 +33,30 @@ local Config do
 	if Adonis then
 		xpcall(function()
 			Config = Library.LiveRequire(Adonis.Config.Settings)
-			OriginalConfig = Plugin.Assign(Config)
+			OriginalConfig = Library.Assign(Config)
 		end, warn)
 	end
 end
 
 -- Plugin components runner
-for _, v in ipairs(script.Parent:WaitForChild("Plugin"):GetChildren()) do
-	local func = require(v)
-	local env = getfenv(func)
-	
-	env.Adonis = Adonis
-	env.OriginalConfig = OriginalConfig
-	env.Plugin = Plugin
-	env.Library = Library
-	env.Widgets = Widgets
-	env.Run = Run
-	env.Options = Options
-	env.Config = Config
-	env.AllRanks = AllRanks
-	env.listFrame = listFrame
+local function updatePluginEnv()
+	for _, v in ipairs(script.Parent:WaitForChild("Plugin"):GetChildren()) do
+		local func = require(v)
+		local env = getfenv(func)
+		
+		env.Adonis = Adonis
+		env.OriginalConfig = OriginalConfig
+		env.Plugin = Plugin
+		env.Library = Library
+		env.Widgets = Widgets
+		env.Run = Run
+		env.Options = Options
+		env.Config = Config
+		env.AllRanks = AllRanks
+		env.listFrame = listFrame
 
-	func()
+		func()
+	end
 end
 
 Run.ButtonEffects(SaveButton)
@@ -94,6 +86,7 @@ SaveButton.MouseButton1Click:Connect(function()
 end)
 
 if Adonis then
+	updatePluginEnv()
 	Plugin.Init()
 else
 	local UI = Library.InstallUI(true)
@@ -111,11 +104,12 @@ else
 		Installing = true
 		Adonis = Library.Install()
 		Config = Library.LiveRequire(Adonis.Config.Settings)
-		OriginalConfig = Plugin.Assign(Config)
+		OriginalConfig = Library.Assign(Config)
 
 		UI:Destroy()
 		SaveButton.Visible = true
-
+		
+		updatePluginEnv()
 		Plugin.Init()
 	end)
 	

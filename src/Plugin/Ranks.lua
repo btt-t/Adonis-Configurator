@@ -8,7 +8,7 @@ return function()
 		local Ranks = Widgets.CollapsibleTitledSection.new("suffix", "Ranks", true, true, true)
 		local seven = UDim.new(0, 7)
 		local contents = Ranks:GetContentsFrame()
-		local create = Library.Create(true)
+		local create = Library.Clone("Create")
 
 		AllRanks = Config.Settings.Ranks or {}
 		Ranks:SetCollapsedState(false)
@@ -20,7 +20,7 @@ return function()
 		contents.UIPadding.PaddingRight = seven
 
 		local function onRankAdded(rankName, rankData)
-			local rank = Library.Rank()
+			local rank = Library.Clone("Rank")
 			local editing = false
 
 			AllRanks[rankName] = rankData
@@ -166,7 +166,7 @@ return function()
 					continue
 				end
 
-				local bind = Library.Bind()
+				local bind = Library.Clone("Bind")
 
 				bind.Text = user
 				addBind(bind)

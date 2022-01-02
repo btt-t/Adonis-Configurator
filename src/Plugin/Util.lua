@@ -21,9 +21,10 @@ return function()
 					)
 				)
 
-				local values = Library.ArrayPrompt()
-				local valueBase = Library.Value()
+				local values = Library.Clone("ArrayPrompt")
+				local valueBase = Library.Clone("Value")
 				local vValues = values.Values
+				
 				local function addValue(existing)
 					local value = valueBase:Clone()
 
@@ -40,7 +41,7 @@ return function()
 						value.Text = existing
 					end
 
-					value.Parent = values.Values
+					value.Parent = vValues
 				end
 
 				widget.Name = "ValueEditor-" .. Setting

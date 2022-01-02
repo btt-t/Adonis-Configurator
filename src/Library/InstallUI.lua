@@ -1,9 +1,7 @@
-local UI = script:WaitForChild("Install")
+-- // INSTALLUI
 
-local function InstallUI(Enabled: boolean): Frame
-	UI.Visible = Enabled
-	
-	return UI
+local Install = script.Parent.Parent.Assets.Install
+
+return function()
+	return Install
 end
-
-return InstallUI

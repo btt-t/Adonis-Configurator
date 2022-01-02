@@ -1,9 +1,7 @@
-local Save = script:WaitForChild("Button")
+-- // SAVEBUTTON
 
-local function SaveButton(): TextButton
-	Save.Visible = true
-	
-	return Save
+local Button = script.Parent.Parent.Assets.Button
+
+return function()
+	return Button
 end
-
-return SaveButton
