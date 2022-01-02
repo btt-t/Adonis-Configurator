@@ -54,14 +54,6 @@ return function()
 					bindObject.SelectionStart = 1
 				end)
 
-				bindObject.Delete.MouseEnter:Connect(function()
-					bindObject.Delete.Image = hover
-				end)
-
-				bindObject.Delete.MouseLeave:Connect(function()
-					bindObject.Delete.Image = noHover
-				end)
-
 				bindObject.Delete.MouseButton1Down:Connect(function()
 					local pos = table.find(AllRanks[rankName].Users, currentText)
 
@@ -74,29 +66,10 @@ return function()
 				end)
 			end
 
-			local function rankButton(button)
-				local noHover = button.Image
-				local hover = button.HoverImage
-
-				button.HoverImage = ""
-
-				button.MouseEnter:Connect(function()
-					button.Image = hover
-				end)
-
-				button.MouseLeave:Connect(function()
-					button.Image = noHover
-				end)
-			end
-
 			if table.find({"Creators", "HeadAdmins", "Admins", "Moderators"}, rankName) then
 				rank.RankName.Edit.Visible = false
 				rank.RankName.Delete.Visible = false
 			end
-
-			rankButton(rank.RankName.Add)
-			rankButton(rank.RankName.Edit)
-			rankButton(rank.RankName.Delete)
 
 			rank.RankName.Text = rankName
 			rank.RankLevel.Text = "Level " .. rankData.Level
