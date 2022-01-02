@@ -19,6 +19,10 @@ This is still a WIP with quite a few critical features that are currently missin
 - a description to each property so the user knows what a property is for
 - a formatting guide somewhere inside the plugin (this may be in the form of advising the user what a value should look like when entering text input)
 
+## Issues
+
+Is something not working correctly? File an issue under the Issues tab, and we'll try sort it out there.
+
 ## Contributing
 
 Feel free to contribute to this plugin in the form of a pull request. 
