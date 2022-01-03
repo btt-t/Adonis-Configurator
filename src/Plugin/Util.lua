@@ -4,6 +4,16 @@
 Plugin, Library, Widgets, Options, Config, AllRanks, listFrame = nil
 
 return function()
+	function Plugin.ArrayToString(array)
+		local master = ""
+
+		for _,v in ipairs(array) do
+			master = master .. v .. ", "
+		end
+
+		return string.sub(master, 1, -3)
+	end
+	
 	function Plugin:Prompt(DisplayNameForSetting, Setting)
 		local bind = Instance.new("BindableEvent")
 		local id = game:GetService("HttpService"):GenerateGUID(false)

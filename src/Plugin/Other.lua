@@ -4,16 +4,6 @@
 Plugin, Library, Widgets, Options, Config, AllRanks, listFrame = nil
 
 return function()
-	function Plugin.ArrayToString(array)
-		local master = ""
-
-		for _,v in ipairs(array) do
-			master = master .. v .. ", "
-		end
-
-		return string.sub(master, 1, -3)
-	end
-
 	-- Boolean/string/array settings not already manually handled by the plugin
 	function Plugin.Other()
 		local Other = Widgets.CollapsibleTitledSection.new("suffix", "Other", true, true, true)
