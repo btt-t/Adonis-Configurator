@@ -2,6 +2,9 @@
 
 It's not entirely unexpected for someone to be unfamiliar with Luau syntax. This plugin aims to eliminate that hassle entirely, instead employing a GUI for installation and configuration.
 
+## Requirements
+Please familiarise yourself with Adonis' own syntax before using this (i.e "Username:UserId"). It will make your life easier until I streamline this process. You will need to open the Settings module in the loader to learn about this. I will work on including proper documentation at some point, but for now, this is a workaround.
+
 ## Installation
 
 The average user should just click [here](https://www.roblox.com/library/8359267635/Adonis-Configurator) and install the plugin from Roblox.
