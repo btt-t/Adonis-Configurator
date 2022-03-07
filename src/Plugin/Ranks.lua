@@ -127,7 +127,7 @@ return function()
 			end)
 
 			rank.RankName.Add.MouseButton1Down:Connect(function()
-				local bind = Library.Bind()
+				local bind = Library.Clone("Bind")
 
 				addBind(bind)
 
