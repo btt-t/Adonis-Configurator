@@ -56,6 +56,7 @@ local function updatePluginEnv()
 		env.Config = Config
 		env.AllRanks = AllRanks
 		env.listFrame = listFrame
+		env.plugin = plugin
 
 		func()
 	end
