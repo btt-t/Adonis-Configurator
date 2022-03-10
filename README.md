@@ -1,4 +1,4 @@
-> Roblox version is outdated.
+> Roblox version is outdated - install the build in releases to be on the latest version.
 
 # Adonis Configurator (Beta)
 
