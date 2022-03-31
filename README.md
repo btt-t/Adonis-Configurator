@@ -1,4 +1,4 @@
-> Roblox version is outdated - install the build in releases to be on the latest version.
+> GitHub version is outdated - install the plugin from [here](https://www.roblox.com/library/8359267635/Adonis-Configurator) to use the latest version.
 
 # Adonis Configurator (Beta)
 
