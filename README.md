@@ -1,3 +1,6 @@
+> **Not Maintained**
+> Unfortunately, I've been busy and as such, this project hasn't been maintained and won't be anytime soon.
+
 > GitHub version is outdated - install the plugin from [here](https://www.roblox.com/library/8359267635/Adonis-Configurator) to use the latest version.
 
 # Adonis Configurator (Beta)
